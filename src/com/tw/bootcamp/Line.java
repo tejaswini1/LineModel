@@ -1,21 +1,20 @@
 package com.tw.bootcamp;
 
-
-import com.tw.bootcamp.Calculator;
-import com.tw.bootcamp.Coordinates;
-
 public class Line {
 
-    private Coordinates start;
-    private Coordinates end;
+    private int startX,endX;
+    private int startY,endY;
 
-    public Line(Coordinates start,Coordinates end){
-        this.start=start;
-        this.end=end;
+
+    public Line(int startX,int startY,int endX,int endY){
+        this.endX=endX;
+        this.endY=endY;
+        this.startX=startX;
+        this.startY=startY;
     }
 
 
-    public int getLength(){
-        return Calculator.calculate(start, end);
+    public int length(){
+        return Calculator.calculate(startX,startY,endX, endY);
     }
 }
